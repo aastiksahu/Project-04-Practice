@@ -48,13 +48,13 @@ public final class JDBCDataSource {
 			try {
 				datasource.cpds.setDriverClass(rb.getString("driver"));
 				
-				String jdbcUrl = System.getenv("DATABASE_URL");
-				if (jdbcUrl == null) {
-					jdbcUrl = rb.getString("url");
-				}
-				datasource.cpds.setJdbcUrl(rb.getString(jdbcUrl));
+//				String jdbcUrl = System.getenv("DATABASE_URL");
+//				if (jdbcUrl == null) {
+//					jdbcUrl = rb.getString("url");
+//				}
+//				datasource.cpds.setJdbcUrl(rb.getString(jdbcUrl));
 				
-//				datasource.cpds.setJdbcUrl(rb.getString("url"));
+				datasource.cpds.setJdbcUrl(rb.getString("url"));
 				datasource.cpds.setUser(rb.getString("username"));
 				datasource.cpds.setPassword(rb.getString("password"));
 				datasource.cpds.setMinPoolSize(Integer.parseInt(rb.getString("minPoolSize")));
